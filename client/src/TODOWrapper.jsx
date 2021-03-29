@@ -5,11 +5,11 @@ import Styles, { TODOLine } from './Styles.js'
 const TODOWrapper = (props) => {
   return (
     <div>
-    <TODOHouseArray
-      todoArray={props.todoArray}
-      todoTransform={props.todoTransform}
-    />
-    <p></p><TODOLine></TODOLine>
+      <TODOHouseArray
+        todoArray={props.todoArray}
+        todoTransform={props.todoTransform}
+      />
+      <p></p><TODOLine></TODOLine>
     </div>
   )
 }

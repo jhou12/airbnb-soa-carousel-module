@@ -1,13 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Wrapper from './Wrapper.jsx'
-import HouseArray from './HouseArray.jsx'
-import House from './House.jsx'
-import ThingsToKnow from './ThingsToKnow.jsx'
 import TODOWrapper from './TODOWrapper.jsx'
-import PaulyTest from './PaulyTest.jsx'
-// import styled from 'styled-components'
-import Styles, { Carousel, Test, Title, Buttons, WrapperStyled, Counter, Left, Right, GrayBg, TODOCarousel, TODOTest, TODOTitle, TODOWrapperStyled, TODOLine, ArrowIcon, ArrowIconLeft, ThingsLine, MaxWidth, WhiteBg } from './Styles.js'
+import Styles, { Carousel, Title, Buttons, WrapperStyled, Counter, Left, Right, GrayBg, TODOCarousel, TODOWrapperStyled, ArrowIconRight, ArrowIconLeft, MaxWidth } from './Styles.js'
 
 const App = (props) => {
   const [top12, setTop12] = useState([])
@@ -56,7 +51,7 @@ const App = (props) => {
   useEffect(() => {
     axios(`/morePlaces/propId/${id}`)
     .then(res =>{
-      console.log('MOREPLACES DATATEST!', res.data)
+      console.log('MOREPLACES DATATEST!', res.data) // take out!
       setTop12(res.data)
     })
   }, [])
@@ -67,52 +62,42 @@ const App = (props) => {
       return (
     <MaxWidth>
       <GrayBg>
-      {/* <WhiteBg>
-          <ThingsToKnow/>
-          </WhiteBg> */}
+
         <p></p><Carousel>
-          {/* <Test>
-          carousel index: {array} transform: {transform}
-        </Test> */}
           <Title>More places to stay</Title>
 
           <Buttons>
             <Counter>{array + 1}/3 </Counter>{" "}
-          <Left onClick={arrowLeft}><ArrowIconLeft/></Left>
-          <Right onClick={arrowRight}><ArrowIcon/></Right>
+            <Left onClick={arrowLeft}><ArrowIconLeft/></Left>
+            <Right onClick={arrowRight}><ArrowIconRight/></Right>
           </Buttons>
 
           <WrapperStyled>
-          <Wrapper
-          top12={top12}
-          array={array}
-          transform={transform}
-          />
+            <Wrapper
+            top12={top12}
+            array={array}
+            transform={transform}
+            />
           </WrapperStyled>
-
         </Carousel>
 
-          {/* <TODOTest>
-          carousel index: {todoArray} transform: {todoTransform}
-        </TODOTest> */}
         <TODOCarousel>
           <Title>Things to do nearby</Title>
 
           <Buttons>
             <Counter>{todoArray + 1}/3 </Counter>{" "}
-          <Left onClick={todoArrowLeft}><ArrowIconLeft/></Left>
-          <Right onClick={todoArrowRight}><ArrowIcon/></Right>
+            <Left onClick={todoArrowLeft}><ArrowIconLeft/></Left>
+            <Right onClick={todoArrowRight}><ArrowIconRight/></Right>
           </Buttons>
 
-        <TODOWrapperStyled>
-          <TODOWrapper
-          todoArray = {todoArray}
-          todoTransform = {todoTransform}
-          />
-        </TODOWrapperStyled>
+          <TODOWrapperStyled>
+            <TODOWrapper
+            todoArray = {todoArray}
+            todoTransform = {todoTransform}
+            />
+          </TODOWrapperStyled>
         </TODOCarousel>
 
-          {/* <PaulyTest/> */}
     </GrayBg>
    </MaxWidth>
       )

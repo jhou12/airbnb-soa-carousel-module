@@ -4,22 +4,20 @@ import Styles, { TODOHouseStyled, TODOHousePic, TODORatingLine, TODOReviewCount,
 const TODOHouse = (props) => {
   return (
     <TODOHouseStyled>
-    <br/>{<TODOHousePic src='https://fecstock.s3.us-east-2.amazonaws.com/icecream.jpg'/>}
-    <br/>
+      <br/>{<TODOHousePic src='https://fecstock.s3.us-east-2.amazonaws.com/icecream.jpg'/>}
 
-    <TODORatingLine>
-      <PinkStar/>
-      4.32 <TODOReviewCount>(20)</TODOReviewCount>
-    </TODORatingLine>
+      <br/><TODORatingLine>
+        <PinkStar/>
+        4.32 <TODOReviewCount>(20)</TODOReviewCount>
+      </TODORatingLine>
 
-    <TODODescription>
-    Shove Ice Cream Into Your Face!
-    <br/><TODOPriceLine>
-      <TODOPrice>From $20</TODOPrice> / person
-      </TODOPriceLine>
-    </TODODescription>
-
-</TODOHouseStyled>
+      <TODODescription>
+        Shove Ice Cream Into Your Face!
+        <br/><TODOPriceLine>
+        <TODOPrice>From $20</TODOPrice> / person
+        </TODOPriceLine>
+      </TODODescription>
+    </TODOHouseStyled>
   )
 }
 

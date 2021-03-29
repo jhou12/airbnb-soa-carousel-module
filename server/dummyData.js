@@ -2,18 +2,18 @@ let makeArray = function() {
   let houseArray = []
   for (let i = 0; i < 12; i++) {
     let dummyHouse = {}
-    dummyHouse.houseUrl = `https://fakehouses.s3.us-east-2.amazonaws.com/0.jpg` // got from dane
-    dummyHouse.overallRating = 4.32 // got from me
-    dummyHouse.totalReviews = 50 // got from me
-    dummyHouse.houseType = "Entire house" // got from pauly
-    dummyHouse.bedrooms = 4 // got from pauly
-    dummyHouse.houseTitle = "Standard Suburban Jawn" // got from dane
-    dummyHouse.totalPrice = 234 // hardcoded!
-    dummyHouse.superhost = true // got from dane
+    dummyHouse.houseUrl = `https://fakehouses.s3.us-east-2.amazonaws.com/0.jpg`
+    dummyHouse.overallRating = 4.32
+    dummyHouse.totalReviews = 50
+    dummyHouse.houseType = "Entire house"
+    dummyHouse.bedrooms = 4
+    dummyHouse.houseTitle = "Standard Suburban Jawn"
+    dummyHouse.totalPrice = 234
+    dummyHouse.superhost = true
     dummyHouse.propertyId = i
     houseArray.push(dummyHouse)
   }
   return houseArray
 }
 
-module.exports.makeArray = makeArray;
+module.exports = { makeArray }

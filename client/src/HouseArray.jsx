@@ -1,6 +1,5 @@
 import React from 'react';
 import House from './House.jsx'
-// import styled from 'styled-components'
 import Styles, { ArrayStyled } from './Styles.js'
 
 const HouseArray = (props) => {
