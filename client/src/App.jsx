@@ -51,7 +51,6 @@ const App = (props) => {
   useEffect(() => {
     axios(`/morePlaces/propId/${id}`)
     .then(res =>{
-      console.log('MOREPLACES DATATEST!', res.data) // take out!
       setTop12(res.data)
     })
   }, [])

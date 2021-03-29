@@ -1,24 +1,27 @@
-# Airbnb Carousel Clone
+# Airbnb SOA Carousel Module
+Service-Oriented Architecture app that makes several API requests to other services, and populates images and data in a repeating Airbnb-styled carousel of 12 products, with fallback data for request errors. The first (active) carousel is styled after the Airbnb "More places to stay" service, and the second (inactive) carousel is based on the "Things do to nearby" service. Made with React, React Styled Components, Express, and Node. Instructions available below for both local and EC2 setup.
 
-I built this project from scratch to clone an Airbnb product page carousel. It displays an array of 12 houses, showing 4 houses at a time, and rotates continuously between the first and last turn cycles when clicked. Made with Express, React, and Node, and deployed using Amazon EC2.
+<p align="center">
+<img src="screenshot.png" width="600"/>
+</p>
 
-### Click [here](https://drive.google.com/file/d/1mt6DU9qSAPfE5dULvrw0HqkH4PqjrBEu/view?usp=sharing) for demo!
+## Setup on Local:
 
-<!-- ## Live Demo Links
-
-  - Reviews: [link]
-  - Proxy: [link] -->
-
-## Setup on Local
-
-1. git clone
+1. `git clone`
 1. install dependencies with `npm install`
 1. start server with `npm run start`
-1. view at PORT/rooms/:id (for id values 0-99)
+1. build bundle with `npm run build`
+1. verify app up and running at `localhost:3000/rooms/:id`(for id values 0-99)
+1. for development, start webpack with `npm run react-dev`
 
-For setup with proxy, complete steps above and follow steps for [proxy](https://github.com/FEC-corgis/Jenny-Proxy).
+## Setup on EC2:
+Complete local setup & [add ec2 readme]
+
+## Setup with Proxy:
+
+For setup with proxy, complete steps above and follow steps for [proxy](link to proxy repo).
 
 ## Related Projects
 
-  - https://github.com/FEC-corgis/Jenny-Service-Reviews
-  - https://github.com/FEC-corgis/Jenny-Proxy
+  - [add link to proxy repo]
+  - [add link to reviews repo]
