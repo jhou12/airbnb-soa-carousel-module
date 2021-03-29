@@ -1,7 +1,7 @@
 const compression = require('compression')
 const express = require('express')
 const app = express()
-const port = 3000
+const port = 3002
 const dummyData = require('./dummyData.js')
 const cors = require('cors')
 const axios = require('axios')
@@ -37,7 +37,7 @@ app.get('/morePlaces/propId/:id', async (req, res) => {
     }
     console.log('GOT propId data!')
 
-    // get overallResults & reviewsTotal
+    // get overall rating & review count
     let houseReviewsResponse = await Promise.all(top12RegionIds.map(propId => axios(`http://3.20.69.232:1984/reviews/morePlaces/${propId}`)))
     for (let i = 0; i < houseReviewsResponse.length; i++) {
       data[i].overallRating = houseReviewsResponse[i].data.overallRating
