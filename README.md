@@ -31,7 +31,7 @@ nvm install node
 1. `git clone` repo
 1. install dependencies with `npm install`
 1. start server with `npm run start`
-1. verify app up and running at url `http://[Public IPv4 DNS]:3001/rooms/:id` (for id values 0-99).
+1. verify app up and running at url `http://[Public IPv4 DNS]:3002/rooms/:id` (for id values 0-99).
 NOTE: must use `http`, not `https`, or will return error
 1. to stop instance, go to instance page and click Instance State > Stop Instance.
 
